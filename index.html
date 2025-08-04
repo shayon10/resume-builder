@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Md. Siamul Islam Shayon</title>
+    <title>Resume Builder</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Calibri&family=Palatino+Linotype&display=swap" rel="stylesheet">
@@ -19,189 +19,208 @@
             font-family: 'Palatino Linotype', serif;
         }
         .section-heading {
-            border-bottom: 2px solid #000000; /* Changed to dark black */
+            border-bottom: 2px solid #000000;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
         .dark-hr {
-            border-color: #000000; /* Dark black for the hr tag */
+            border-color: #000000;
         }
     </style>
 </head>
-<body class="bg-gray-100 p-8 md:p-12">
+<body class="bg-gray-100 p-4 md:p-8 flex flex-col lg:flex-row gap-8">
 
-    <!-- Main CV Container -->
-    <div id="cv-content" class="bg-white max-w-4xl mx-auto rounded-xl shadow-lg p-6 md:p-10">
-
-        <!-- Header Section -->
-        <header class="pb-4 border-b-2 border-black mb-6 text-center">
-            <h1 class="text-4xl font-bold text-gray-800">MD. SIAMUL ISLAM SHAYON</h1>
-            <div class="mt-2 text-sm text-gray-600">
-                <span class="block">KHILGAON DHAKA 1219 | +8801616366650 | s.i.shayon@gmail.com</span>
-                <a href="https://www.linkedin.com/in/md-siamul-islam-shavon-181201165/" class="text-blue-600 hover:underline" target="_blank">
-                    https://www.linkedin.com/in/md-siamul-islam-shavon-181201165/
-                </a>
-            </div>
-        </header>
-
-        <!-- Professional Summary -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">PROFESSIONAL SUMMARY</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Dedicated and results-oriented Computer Science graduate with a strong foundation in Artificial Intelligence, Machine Learning, and Computer Vision. Skilled in developing efficient deep learning models and solving complex problems through innovative solutions. Proven experience in academic research, model optimization, and working with GPU-accelerated systems for real-world applications.
-            </p>
-        </section>
-        
-        <!-- Education -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">EDUCATION</h2>
-            <div class="space-y-2">
-                <!-- Bachelor's Degree -->
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div class="flex-1">
-                        <p class="font-bold text-gray-800">Bachelor of Science in Computer Science & Engineering</p>
-                        <p class="text-gray-700">East West University (EWU)</p>
-                        <ul class="list-disc list-inside mt-2 text-gray-700">
-                            <li><span class="font-semibold">Major:</span> Data Science | <span class="font-semibold">Non Major:</span> Software Engineering</li>
-                            <li><span class="font-semibold">Thesis Topic:</span> "AI-Powered Skin Disease Detection with ResNet50 and Efficient NetB0".</li>
-                        </ul>
-                    </div>
-                    <div class="mt-2 md:mt-0 md:text-right">
-                        <p class="font-semibold text-gray-600">June 2020 - January 2025</p>
-                        <p class="font-semibold text-gray-600">CGPA: 3.12/4.00</p>
-                    </div>
-                </div>
-
-                <!-- Higher Secondary Certificate -->
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div class="flex-1">
-                        <p class="font-bold text-gray-800">Higher Secondary Certificate</p>
-                        <p class="text-gray-700">Rajarbag Police Lines School And College | <span class="font-semibold">Group:</span> Science</p>
-                    </div>
-                    <div class="mt-2 md:mt-0 md:text-right">
-                        <p class="font-semibold text-gray-600">2017 - 2019</p>
-                    </div>
-                </div>
-
-                <!-- Secondary School Certificate -->
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div class="flex-1">
-                        <p class="font-bold text-gray-800">Secondary School Certificate</p>
-                        <p class="text-gray-700">Boalmari George Academy | <span class="font-semibold">Group:</span> Science</p>
-                    </div>
-                    <div class="mt-2 md:mt-0 md:text-right">
-                        <p class="font-semibold text-gray-600">2014 - 2016</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">EXPERIENCE</h2>
-            <div class="space-y-2 text-gray-700">
-                <!-- Internship Experience -->
-                <div class="flex justify-between items-center">
+    <!-- Input Form Section -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex-1 max-h-screen overflow-y-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Resume Builder</h2>
+        <form id="resumeForm" class="space-y-6">
+            <!-- Personal Information -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">PERSONAL INFORMATION</h3>
+                <div class="space-y-4">
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800">Brainwave Matrix Solutions, India</h3>
-                        <p class="text-gray-700">Intern (AI/Machine Learning)</p>
+                        <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="fullName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" value="MD. SIAMUL ISLAM SHAYON">
                     </div>
-                    <p class="text-gray-600">Dec 2024 - Jan 2025</p>
-                </div>
-                <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-                    <li>Conducted research and implementation of deep learning models for computer vision tasks.</li>
-                    <li>Developed and trained CNN models using PyTorch and TensorFlow.</li>
-                    <li>Managed GPU-based training pipelines and automated workflows.</li>
-                    <li>Contributed as co-author to multiple research publications.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Publications -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">PUBLICATIONS</h2>
-            <div class="space-y-2 text-gray-700">
-                <div>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10675084" target="_blank" class="text-blue-600 hover:underline"><p class="font-medium">1. Energy Aware Planning Approach Considering Cost of Electrical Energy for Sustainable Development</p></a>
-                    <p class="text-sm text-gray-600">Authors: Md Sabbir Hossain, Sazzadul Islam Shovon, Ummay Khadiza Rumpa, Mahamudul Hasan, Ahmed Wasif Reza</p>
-                </div>
-                <div>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10941675" target="_blank" class="text-blue-600 hover:underline"><p class="font-medium">2. Multi-Class Brain Tumour Classification with CNN on MRI Scans</p></a>
-                    <p class="text-sm text-gray-600">Authors: Nisarga Mridha, Sofia Noor Rafa, Md Siamul Islam Shayon, Nusrat Sultana, KM Safin Kamal, Ahmed Wasif Reza, Mohammad Shamsul Arefin</p>
-                </div>
-                <div>
-                    <p class="font-medium">3. AI-Powered Skin Disease Detection with ResNet50 and Efficient NetB0 (Awaiting Publication)</p>
-                    <p class="text-sm text-gray-600">Authors: Md Siamul Islam Shayon, sabbir ahhmed, Sazzadul Islam Shovon</p>
-                </div>
-                <div>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/11080783" target="_blank" class="text-blue-600 hover:underline"><p class="font-medium">4. A Systematic Clone Detection Performance Analysis</p></a>
-                    <p class="text-sm text-gray-600">Authors: Md Siamul Islam Shayon, sabbir ahhmed, Sazzadul Islam Shovon</p>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Contact Info (Address | Phone | Email)</label>
+                        <input type="text" id="contactInfo" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" value="KHILGAON DHAKA 1219 | +8801616366650 | s.i.shayon@gmail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">LinkedIn URL</label>
+                        <input type="text" id="linkedin" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" value="https://www.linkedin.com/in/md-siamul-islam-shavon-181201165/">
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Academic Projects -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">ACADEMIC PROJECTS</h2>
-            <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-                <li>Facial Expression Recognition using CNN and Transformer hybrid model.</li>
-                <li>Action Detection using Diffusion Model on UCF101 Dataset.</li>
-                <li>Skin Disease Classification using ResNet50 and Efficient NetB0.</li>
-                <li>Brain Tumor Detection from MRI using CNN.</li>
-                <li>Lime Growth Stages Image Classification for Agriculture.</li>
-            </ul>
-        </section>
-        
-        <!-- Relevant Skills -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">RELEVANT SKILLS</h2>
-            <div class="space-y-2 text-gray-700">
-                <p><span class="font-semibold">Programming Languages:</span> Python, C, C++, Java, HTML, CSS</p>
-                <p><span class="font-semibold">Frameworks & Libraries:</span> TensorFlow, PyTorch, OpenCV</p>
-                <p><span class="font-semibold">Tools:</span> Google Colab, Jupyter, VS Code, MATLAB</p>
-                <p><span class="font-semibold">Database Systems:</span> MySQL, SQL, Oracle</p>
-                <p><span class="font-semibold">Other:</span> Power BI, Docker, FastAPI, Microsoft Office Suite</p>
+            <!-- Professional Summary -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">PROFESSIONAL SUMMARY</h3>
+                <textarea id="summary" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">Dedicated and results-oriented Computer Science graduate with a strong foundation in Artificial Intelligence, Machine Learning, and Computer Vision. Skilled in developing efficient deep learning models and solving complex problems through innovative solutions. Proven experience in academic research, model optimization, and working with GPU-accelerated systems for real-world applications.</textarea>
             </div>
-        </section>
-        
-        <!-- Certifications -->
-        <section class="mb-4">
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">CERTIFICATIONS</h2>
-            <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-                <li>Best Research Presentation (at IEMTRONICS 2025)</li>
-                <li>Best Project Award - AI & System Design</li>
-                <li>IEEE Sub-Executive Certificate</li>
-            </ul>
-        </section>
-        
-        <!-- References -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">REFERENCES</h2>
-            <table class="w-full text-gray-700">
-                <tr>
-                    <td class="align-top pr-4">
-                        <p class="font-semibold">Nishat Tasnim Niloy<br>Lecturer<br>Department of Computer Science & Engineering<br>East West University<br>
-                        <strong>Email:</strong> <a href="mailto:nishat.niloy@ewubd.edu" class="text-blue-600 hover:underline">nishat.niloy@ewubd.edu</a></p>
-                    </td>
-                    <td class="align-top">
-                        <p class="font-semibold">Dr. Ahmed Wasif Reza<br>Professor<br>Department of Computer Science & Engineering<br>East West University<br>
-                        <strong>Email:</strong> <a href="mailto:wasif@ewubd.edu" class="text-blue-600 hover:underline">wasif@ewubd.edu</a></p>
-                    </td>
-                </tr>
-            </table>
-            <hr class="mt-4 border-black dark-hr">
-        </section>
 
+            <!-- Education -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">EDUCATION</h3>
+                <div id="education-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Degree</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Bachelor of Science in Computer Science & Engineering">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">University</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="East West University (EWU)">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Major/Non-Major</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Major: Data Science | Non Major: Software Engineering">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Thesis Topic</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="AI-Powered Skin Disease Detection with ResNet50 and Efficient NetB0">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Dates</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="June 2020 - January 2025">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">CGPA</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="3.12/4.00">
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addEducation()">Add Education</button>
+            </div>
+            
+            <!-- Experience -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">EXPERIENCE</h3>
+                <div id="experience-container" class="space-y-4">
+                     <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Company</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Brainwave Matrix Solutions, India">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Role</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Intern (AI/Machine Learning)">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Dates</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Dec 2024 - Jan 2025">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Description (bullet points, one per line)</label>
+                        <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" rows="4">Conducted research and implementation of deep learning models for computer vision tasks.
+Developed and trained CNN models using PyTorch and TensorFlow.
+Managed GPU-based training pipelines and automated workflows.
+Contributed as co-author to multiple research publications.</textarea>
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addExperience()">Add Experience</button>
+            </div>
+
+            <!-- Publications -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">PUBLICATIONS</h3>
+                <div id="publications-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Title</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Energy Aware Planning Approach Considering Cost of Electrical Energy for Sustainable Development">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Authors</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Md Sabbir Hossain, Sazzadul Islam Shovon, Ummay Khadiza Rumpa, Mahamudul Hasan, Ahmed Wasif Reza">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Link</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="https://ieeexplore.ieee.org/abstract/document/10675084">
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Title</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Multi-Class Brain Tumour Classification with CNN on MRI Scans">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Authors</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Nisarga Mridha, Sofia Noor Rafa, Md Siamul Islam Shayon, Nusrat Sultana, KM Safin Kamal, Ahmed Wasif Reza, Mohammad Shamsul Arefin">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Link</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="https://ieeexplore.ieee.org/abstract/document/10941675">
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addPublication()">Add Publication</button>
+            </div>
+
+            <!-- Academic Projects -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">ACADEMIC PROJECTS</h3>
+                <div id="projects-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Project Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Facial Expression Recognition using CNN and Transformer hybrid model.">
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Project Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Action Detection using Diffusion Model on UCF101 Dataset.">
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addProject()">Add Project</button>
+            </div>
+
+            <!-- Relevant Skills -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">RELEVANT SKILLS</h3>
+                <div id="skills-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Category (e.g., "Programming Languages")</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Programming Languages">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Skills (comma separated)</label>
+                        <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" rows="2">Python, C, C++, Java, HTML, CSS</textarea>
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addSkill()">Add Skill Category</button>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">CERTIFICATIONS</h3>
+                <div id="certifications-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Certification</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Best Research Presentation (at IEMTRONICS 2025)">
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Certification</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Best Project Award - AI & System Design">
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addCertification()">Add Certification</button>
+            </div>
+
+            <!-- References -->
+            <div>
+                <h3 class="text-xl font-bold text-gray-700 section-heading text-center">REFERENCES</h3>
+                <div id="references-container" class="space-y-4">
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Dr. Ahmed Wasif Reza">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Title</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Professor">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Department</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Department of Computer Science & Engineering">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">University</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="East West University">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Email</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="wasif@ewubd.edu">
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Nishat Tasnim Niloy">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Title</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Lecturer">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Department</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="Department of Computer Science & Engineering">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">University</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="East West University">
+                        <label class="block text-sm font-medium text-gray-700 mt-2">Email</label>
+                        <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" value="nishat.niloy@ewubd.edu">
+                    </div>
+                </div>
+                <button type="button" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600" onclick="addReference()">Add Reference</button>
+            </div>
+        </form>
     </div>
 
-    <!-- Download Buttons -->
-    <div class="fixed bottom-4 right-4 flex space-x-2 z-50">
-        <button id="downloadPdfBtn" class="bg-red-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105">
-            Download PDF
-        </button>
-        <button id="downloadDocxBtn" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
-            Download DOCX
-        </button>
+    <!-- Resume Preview and Download Section -->
+    <div class="bg-white max-w-4xl mx-auto rounded-xl shadow-lg p-6 flex-1">
+        <div id="cv-content" class="bg-white">
+            <!-- Resume content will be generated here -->
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="flex justify-center space-x-4 mt-8">
+            <button id="downloadPdfBtn" class="bg-red-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105">
+                Download PDF
+            </button>
+            <button id="downloadDocxBtn" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+                Download DOCX
+            </button>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
@@ -209,6 +228,193 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cvContent = document.getElementById('cv-content');
+            const form = document.getElementById('resumeForm');
+
+            function updateResume() {
+                const fullName = document.getElementById('fullName').value;
+                const contactInfo = document.getElementById('contactInfo').value;
+                const linkedin = document.getElementById('linkedin').value;
+                const summary = document.getElementById('summary').value;
+
+                let html = `
+                    <header class="pb-4 border-b-2 border-black mb-4 text-center">
+                        <h1 class="text-4xl font-bold text-gray-800">${fullName}</h1>
+                        <div class="mt-2 text-sm text-gray-600">
+                            <span class="block">${contactInfo}</span>
+                            <a href="${linkedin}" class="text-blue-600 hover:underline" target="_blank">${linkedin}</a>
+                        </div>
+                    </header>
+                    <section class="mb-4">
+                        <h2 class="text-2xl font-bold text-gray-700 section-heading text-center">PROFESSIONAL SUMMARY</h2>
+                        <p class="text-gray-700 leading-relaxed">${summary}</p>
+                    </section>
+                `;
+
+                // Education Section
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">EDUCATION</h2><div class="space-y-2">`;
+                document.querySelectorAll('#education-container > div').forEach(div => {
+                    const inputs = Array.from(div.querySelectorAll('input, textarea'));
+                    html += `
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">${inputs[0].value}</p>
+                                <p class="text-gray-700">${inputs[1].value}</p>
+                                <ul class="list-disc list-inside mt-2 text-gray-700">
+                                    <li>${inputs[2].value}</li>
+                                    <li><span class="font-semibold">Thesis Topic:</span> "${inputs[3].value}".</li>
+                                </ul>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:text-right">
+                                <p class="font-semibold text-gray-600">${inputs[4].value}</p>
+                                <p class="font-semibold text-gray-600">CGPA: ${inputs[5].value}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div></section>`;
+
+                // Experience Section
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">EXPERIENCE</h2><div class="space-y-2">`;
+                document.querySelectorAll('#experience-container > div').forEach(div => {
+                    const inputs = Array.from(div.querySelectorAll('input, textarea'));
+                    const descriptionItems = inputs[3].value.split('\n').map(item => `<li>${item.trim()}</li>`).join('');
+                    html += `
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">${inputs[0].value}</h3>
+                                    <p class="text-gray-700">${inputs[1].value}</p>
+                                </div>
+                                <p class="text-gray-600">${inputs[2].value}</p>
+                            </div>
+                            <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                                ${descriptionItems}
+                            </ul>
+                        </div>
+                    `;
+                });
+                html += `</div></section>`;
+
+                // Publications Section
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">PUBLICATIONS</h2><div class="space-y-2 text-gray-700">`;
+                document.querySelectorAll('#publications-container > div').forEach(div => {
+                    const inputs = Array.from(div.querySelectorAll('input, textarea'));
+                    const link = inputs[2].value;
+                    const title = link ? `<a href="${link}" target="_blank" class="text-blue-600 hover:underline"><p class="font-medium">${inputs[0].value}</p></a>` : `<p class="font-medium">${inputs[0].value}</p>`;
+                    html += `
+                        <div>
+                            ${title}
+                            <p class="text-sm text-gray-600">Authors: ${inputs[1].value}</p>
+                        </div>
+                    `;
+                });
+                html += `</div></section>`;
+
+                // Academic Projects
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">ACADEMIC PROJECTS</h2><ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">`;
+                document.querySelectorAll('#projects-container > div').forEach(div => {
+                    const projectName = div.querySelector('input').value;
+                    html += `<li>${projectName}</li>`;
+                });
+                html += `</ul></section>`;
+
+                // Relevant Skills
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">RELEVANT SKILLS</h2><div class="space-y-2 text-gray-700">`;
+                document.querySelectorAll('#skills-container > div').forEach(div => {
+                    const inputs = Array.from(div.querySelectorAll('input, textarea'));
+                    html += `<p><span class="font-semibold">${inputs[0].value}:</span> ${inputs[1].value}</p>`;
+                });
+                html += `</div></section>`;
+
+                // Certifications
+                html += `<section class="mb-4"><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">CERTIFICATIONS</h2><ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">`;
+                document.querySelectorAll('#certifications-container > div').forEach(div => {
+                    const certName = div.querySelector('input').value;
+                    html += `<li>${certName}</li>`;
+                });
+                html += `</ul></section>`;
+
+                // References
+                html += `<section><h2 class="text-2xl font-bold text-gray-700 section-heading text-center">REFERENCES</h2><table class="w-full text-gray-700"><tr>`;
+                const references = Array.from(document.querySelectorAll('#references-container > div'));
+                references.forEach((div, index) => {
+                    const inputs = Array.from(div.querySelectorAll('input'));
+                    html += `<td class="align-top pr-4">
+                        <p class="font-semibold">${inputs[0].value}<br>${inputs[1].value}<br>${inputs[2].value}<br>${inputs[3].value}<br>
+                        <strong>Email:</strong> <a href="mailto:${inputs[4].value}" class="text-blue-600 hover:underline">${inputs[4].value}</a></p>
+                    </td>`;
+                    if ((index + 1) % 2 === 0 && index < references.length - 1) {
+                        html += `</tr><tr>`;
+                    }
+                });
+                html += `</tr></table><hr class="mt-4 border-black dark-hr"></section>`;
+
+                cvContent.innerHTML = html;
+            }
+
+            form.addEventListener('input', updateResume);
+            updateResume(); // Initial render
+
+            // Dynamic form fields
+            function addEducation() {
+                const container = document.getElementById('education-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addExperience() {
+                const container = document.getElementById('experience-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addPublication() {
+                const container = document.getElementById('publications-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addProject() {
+                const container = document.getElementById('projects-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelector('input').value = '';
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addSkill() {
+                const container = document.getElementById('skills-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addCertification() {
+                const container = document.getElementById('certifications-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelector('input').value = '';
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+            function addReference() {
+                const container = document.getElementById('references-container');
+                const newField = container.firstElementChild.cloneNode(true);
+                newField.querySelectorAll('input, textarea').forEach(input => input.value = '');
+                container.appendChild(newField);
+                newField.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            window.addEducation = addEducation;
+            window.addExperience = addExperience;
+            window.addPublication = addPublication;
+            window.addProject = addProject;
+            window.addSkill = addSkill;
+            window.addCertification = addCertification;
+            window.addReference = addReference;
+
+
             const downloadPdfBtn = document.getElementById('downloadPdfBtn');
             const downloadDocxBtn = document.getElementById('downloadDocxBtn');
 
@@ -217,7 +423,7 @@
                 downloadPdfBtn.addEventListener('click', () => {
                     const pdfOptions = {
                         margin: [10, 10, 10, 10],
-                        filename: 'Md-Siamul-Islam-Shayon-CV.pdf',
+                        filename: `${fullName.value}-CV.pdf`,
                         image: { type: 'jpeg', quality: 0.98 },
                         html2canvas: { scale: 2 },
                         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -231,51 +437,33 @@
                 downloadDocxBtn.addEventListener('click', async () => {
                     const { Document, Packer, Paragraph, TextRun, HeadingLevel } = docx;
 
-                    // Function to parse HTML to a DOCX-friendly structure
                     const parseHtmlToDocx = (htmlElement) => {
                         const paragraphs = [];
                         const children = htmlElement.childNodes;
                         children.forEach(child => {
                             if (child.nodeType === Node.TEXT_NODE) {
                                 if (child.textContent.trim() !== '') {
-                                    paragraphs.push(new Paragraph({
-                                        children: [new TextRun({ text: child.textContent, font: 'Calibri' })],
-                                    }));
+                                    paragraphs.push(new Paragraph({ children: [new TextRun({ text: child.textContent, font: 'Calibri' })] }));
                                 }
                             } else if (child.nodeType === Node.ELEMENT_NODE) {
                                 if (child.tagName === 'H1') {
-                                    paragraphs.push(new Paragraph({
-                                        children: [new TextRun({ text: child.textContent, bold: true, size: 48, font: 'Palatino Linotype' })],
-                                        alignment: docx.AlignmentType.CENTER,
-                                        spacing: { after: 200 },
-                                    }));
+                                    paragraphs.push(new Paragraph({ children: [new TextRun({ text: child.textContent, bold: true, size: 48, font: 'Palatino Linotype' })], alignment: docx.AlignmentType.CENTER, spacing: { after: 200 } }));
                                 } else if (child.tagName === 'H2') {
-                                    paragraphs.push(new Paragraph({
-                                        children: [new TextRun({ text: child.textContent, bold: true, size: 36, font: 'Palatino Linotype' })],
-                                        alignment: docx.AlignmentType.CENTER,
-                                        spacing: { before: 400, after: 200 },
-                                    }));
+                                    paragraphs.push(new Paragraph({ children: [new TextRun({ text: child.textContent, bold: true, size: 36, font: 'Palatino Linotype' })], alignment: docx.AlignmentType.CENTER, spacing: { before: 400, after: 200 } }));
+                                } else if (child.tagName === 'H3') {
+                                     paragraphs.push(new Paragraph({ children: [new TextRun({ text: child.textContent, bold: true, size: 28, font: 'Palatino Linotype' })] }));
                                 } else if (child.tagName === 'P') {
-                                    paragraphs.push(new Paragraph({
-                                        children: [new TextRun({ text: child.textContent, font: 'Calibri' })],
-                                    }));
+                                    paragraphs.push(new Paragraph({ children: [new TextRun({ text: child.textContent, font: 'Calibri' })] }));
                                 } else if (child.tagName === 'UL') {
                                     Array.from(child.children).forEach(li => {
-                                        paragraphs.push(new Paragraph({
-                                            children: [new TextRun({ text: li.textContent.trim(), font: 'Calibri' })],
-                                            bullet: { level: 0 },
-                                        }));
+                                        paragraphs.push(new Paragraph({ children: [new TextRun({ text: li.textContent.trim(), font: 'Calibri' })], bullet: { level: 0 } }));
                                     });
                                 } else if (child.tagName === 'TABLE') {
                                     Array.from(child.rows).forEach(row => {
                                         const rowParagraphs = [];
                                         Array.from(row.cells).forEach(cell => {
-                                            rowParagraphs.push(new Paragraph({
-                                                children: [new TextRun({ text: cell.textContent.trim(), font: 'Calibri' })],
-                                            }));
+                                            rowParagraphs.push(new Paragraph({ children: [new TextRun({ text: cell.textContent.trim(), font: 'Calibri' })] }));
                                         });
-                                        // This is a simplified table representation as DOCX table creation is complex.
-                                        // It will render as multiple paragraphs.
                                         paragraphs.push(...rowParagraphs);
                                     });
                                 }
@@ -290,11 +478,10 @@
                         }]
                     });
 
-                    // Generate the DOCX file
                     const blob = await Packer.toBlob(doc);
                     const link = document.createElement('a');
                     link.href = URL.createObjectURL(blob);
-                    link.download = 'Md-Siamul-Islam-Shayon-CV.docx';
+                    link.download = `${fullName.value}-CV.docx`;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
